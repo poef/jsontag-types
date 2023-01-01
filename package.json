@@ -1,0 +1,43 @@
+{
+  "name": "@muze-nl/jsontag-types",
+  "version": "0.1",
+  "description": "tagged json types",
+  "type": "module",
+  "main": "src/JSONTagTypes.mjs",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap test/*.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poef/jsontag-types.git"
+  },
+  "author": "auke@muze.nl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poef/jsontag-types/issues"
+  },
+  "homepage": "https://github.com/poef/jsontag-types#readme",
+  "targets": {
+    "regular": {
+      "source": "src/browser.mjs",
+      "context": "browser",
+      "includeNodeModules": true
+    }
+  },
+  "dependencies": {
+    "@muze-nl/jsontag": "^0.5.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "eslint": "^8.13.0",
+    "events": "^3.3.0",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "tap": "^16.0.1"
+  }
+}
