@@ -21,7 +21,7 @@ In the browser:
 
 In node:
 ```javascript
-import JSONTagTypes from 'JSONTagTypes'
+import JSONTagTypes from '@muze-nl/jsontag-types'
 
 ```
 
