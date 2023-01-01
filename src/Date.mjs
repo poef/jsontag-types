@@ -1,4 +1,4 @@
-import { getAttributesString } from "./functions.mjs"
+import JSONTag from "@muze-nl/jsontag"
 
 function getISODate(epoch)
 {
@@ -77,7 +77,7 @@ export default class myDate {
 
 	toJSONTag()
 	{
-		let attributes = getAttributesString(this)
+		let attributes = JSONTag.getAttributesString(this)
 		return '<date'+(attributes ? ' ' + attributes : '')+'>'+this.toJSON()
 	}
 }

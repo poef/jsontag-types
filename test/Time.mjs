@@ -1,4 +1,4 @@
-import Time from '../src/lib/Time.mjs'
+import Time from '../src/Time.mjs'
 import tap from 'tap'
 
 tap.test('Create', t => {

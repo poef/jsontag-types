@@ -1,4 +1,4 @@
-import { getAttributesString } from "./functions.mjs"
+import JSONTag from "@muze-nl/jsontag"
 
 export default class UUID {
 	#value;
@@ -37,7 +37,7 @@ export default class UUID {
 
 	toJSONTag()
 	{
-		let attributes = getAttributesString(this)
+		let attributes = JSONTag.getAttributesString(this)
 		return '<uuid'+(attributes ? ' ' + attributes : '')+'>'+this.toJSON()
 	}
 

@@ -1,4 +1,4 @@
-import Money from '../src/lib/Money.mjs'
+import Money from '../src/Money.mjs'
 import tap from 'tap'
 
 tap.test('Create', t => {

@@ -1,9 +1,9 @@
-import { setType, setAttributes, getAttributes, getType, isNull } from '@muze-nl/jsontag'
+import JSONTag from '@muze-nl/jsontag'
 import JSONTagTypes from './JSONTagTypes.mjs'
 
 export default function reviver(key, value, meta)
 {
-	let type = getType(value)
+	let type = JSONTag.getType(value)
 	let alltypes = {
 		uuid: 'UUID',
 		link: 'Link',
@@ -13,18 +13,18 @@ export default function reviver(key, value, meta)
 		money: 'Money',
 		null: 'Null'
 	}
-	if (isNull(value)) {
+	if (JSONTag.isNull(value)) {
 		return value
 	}
 	if (alltypes[type]) {
-		let type = getType(value)
-		let attributes = getAttributes(value)
+		let type = JSONTag.getType(value)
+		let attributes = JSONTag.getAttributes(value)
 		let result = JSONTagTypes[alltypes[type]].from(value)
 		if (type) {
-			setType(result, type)
+			JSONTag.setType(result, type)
 		}
 		if (Object.keys(attributes).length) {
-			setAttributes(result, attributes)
+			JSONTag.setAttributes(result, attributes)
 		}
 		return result
 	}

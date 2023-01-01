@@ -1,5 +1,5 @@
 import Decimal from './Decimal.mjs'
-import { getAttributesString } from "./functions.mjs"
+import JSONTag from "@muze-nl/jsontag"
 
 export default class Money {
 
@@ -50,7 +50,7 @@ export default class Money {
 
 	toJSONTag()
 	{
-		let attributes = getAttributesString(this)
+		let attributes = JSONTag.getAttributesString(this)
 		return '<money'+(attributes ? ' ' + attributes : '')+'>'+this.toJSON()
 	}
 

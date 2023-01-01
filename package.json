@@ -28,7 +28,7 @@
     }
   },
   "dependencies": {
-    "@muze-nl/jsontag": "^0.5.1",
+    "@muze-nl/jsontag": "^0.6",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

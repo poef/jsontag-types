@@ -1,4 +1,6 @@
-import JSONTag from '../src/JSONTag.mjs'
+import JSONTag from '@muze-nl/jsontag'
+import JSONTagTypes from '../src/JSONTagTypes.mjs'
+import reviver from '../src/reviver.mjs'
 import tap from 'tap'
 
 tap.test('Revive', t => {
@@ -7,7 +9,7 @@ tap.test('Revive', t => {
 		"name": "Joe",
 		"dob": <date>"1972-09-20"
 	}`
-	let r = JSONTag.parse(j, JSONTag.reviver)
-	t.ok(r.dob instanceof JSONTag.Date)
+	let r = JSONTag.parse(j, reviver)
+	t.ok(r.dob instanceof JSONTagTypes.Date)
 	t.end()
 })

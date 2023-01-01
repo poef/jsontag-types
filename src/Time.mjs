@@ -1,4 +1,4 @@
-import { getAttributesString } from "./functions.mjs"
+import JSONTag from "@muze-nl/jsontag"
 
 function toISOTime(t) {
 	let time     = new Date(t) 
@@ -76,7 +76,7 @@ export default class Time {
 
 	toJSONTag()
 	{
-		let attributes = getAttributesString(this)
+		let attributes = JSONTag.getAttributesString(this)
 		return '<time'+(attributes ? ' ' + attributes : '')+'>'+this.toJSON()
 	}
 }

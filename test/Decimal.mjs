@@ -1,4 +1,4 @@
-import Decimal from '../src/lib/Decimal.mjs'
+import Decimal from '../src/Decimal.mjs'
 import tap from 'tap'
 
 tap.test('Create', t => {

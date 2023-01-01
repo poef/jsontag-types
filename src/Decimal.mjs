@@ -1,4 +1,4 @@
-import { getAttributesString } from "./functions.mjs"
+import JSONTag from "@muze-nl/jsontag"
 
 if (!String.prototype.padStart) {
 	String.prototype.padStart = function padStart(targetLength,padString) {
@@ -60,7 +60,7 @@ export default class Decimal {
 
 	toJSONTag()
 	{
-		let attributes = getAttributesString(this)
+		let attributes = JSONTag.getAttributesString(this)
 		return '<decimal'+(attributes ? ' ' + attributes : '')+'>'+this.toJSON()
 	}
 
